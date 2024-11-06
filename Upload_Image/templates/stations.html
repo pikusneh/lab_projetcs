@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Boxes</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .enter-button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .enter-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <img src="{{ url_for('static', filename='station_photos/visual_inspection_010.png') }}" alt="Image 1">
+        <a href="/enter" class="enter-button">Enter</a>
+    </div>
+    <div class="box">
+        <img src="{{ url_for('static', filename='station_photos/glue_mixer_010.jpeg') }}" alt="Image 2">
+        <a href="/enter" class="enter-button">Enter</a>
+    </div>
+    <div class="box">
+        <img src="{{ url_for('static', filename='station_photos/glue_dispensor_010.jpeg') }}" alt="Image 3">
+        <a href="/enter" class="enter-button">Enter</a>
+    </div>
+    <div class="box">
+        <img src="{{ url_for('static', filename='station_photos/probe_station_005.jpeg') }}" alt="Image 4">
+        <a href="/enter" class="enter-button">Enter</a>
+    </div>
+    <div class="box">
+        <img src="{{ url_for('static', filename='station_photos/probe_station_010.png') }}" alt="Image 5">
+        <a href="/enter" class="enter-button">Enter</a>
+    </div>
+    <div class="box">
+        <img src="{{ url_for('static', filename='station_photos/system_test_010.jpeg') }}" alt="Image 6">
+        <a href="/enter" class="enter-button">Enter</a>
+    </div>
+    <div class="box">
+        <img src="{{ url_for('static', filename='station_photos/microscope_010.jpeg') }}" alt="Image 7">
+        <a href="/enter" class="enter-button">Enter</a>
+    </div>
+    <div class="box">
+        <img src="{{ url_for('static', filename='station_photos/pull_tester_010.jpeg') }}" alt="Image 8">
+        <a href="/enter" class="enter-button">Enter</a>
+    </div>
+    <div class="box">
+        <img src="{{ url_for('static', filename='station_photos/wire_bonder_010.jpeg') }}" alt="Image 9">
+        <a href="/enter" class="enter-button">Enter</a>
+    </div>
+
+</body>
+</html>
+

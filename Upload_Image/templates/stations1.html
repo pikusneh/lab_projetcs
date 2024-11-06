@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Boxes</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+            max-width: 900px; /* Adjust to fit your design */
+        }
+        .box {
+            position: relative;
+            width: 100%;
+            height: 200px; /* Fixed height for uniformity */
+            overflow: hidden;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .enter-button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .enter-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid">
+        <div class="box">
+            <img src="{{ url_for('static', filename='station_photos/visual_inspection_010.png') }}" alt="Visual Inspection">
+            <a href="/visual_inspection" class="enter-button">Enter</a>
+        </div>
+        <div class="box">
+            <img src="{{ url_for('static', filename='station_photos/glue_mixer_010.jpeg') }}" alt="Glue Mixer">
+            <a href="/enter" class="enter-button">Enter</a>
+        </div>
+        <div class="box">
+            <img src="{{ url_for('static', filename='station_photos/glue_dispensor_010.jpeg') }}" alt="Glue Dispenser">
+            <a href="/enter" class="enter-button">Enter</a>
+        </div>
+        <div class="box">
+            <img src="{{ url_for('static', filename='station_photos/probe_station_005.jpeg') }}" alt="Probe Station 005">
+            <a href="/enter" class="enter-button">Enter</a>
+        </div>
+        <div class="box">
+            <img src="{{ url_for('static', filename='station_photos/probe_station_010.png') }}" alt="Probe Station 010">
+            <a href="/enter" class="enter-button">Enter</a>
+        </div>
+        <div class="box">
+            <img src="{{ url_for('static', filename='station_photos/system_test_010.jpeg') }}" alt="System Test">
+            <a href="/enter" class="enter-button">Enter</a>
+        </div>
+        <div class="box">
+            <img src="{{ url_for('static', filename='station_photos/microscope_010.jpeg') }}" alt="Microscope">
+            <a href="/enter" class="enter-button">Enter</a>
+        </div>
+        <div class="box">
+            <img src="{{ url_for('static', filename='station_photos/pull_tester_010.jpeg') }}" alt="Pull Tester">
+            <a href="/enter" class="enter-button">Enter</a>
+        </div>
+        <div class="box">
+            <img src="{{ url_for('static', filename='station_photos/wire_bonder_010.jpeg') }}" alt="Wire Bonder">
+            <a href="/enter" class="enter-button">Enter</a>
+        </div>
+    </div>
+
+</body>
+</html>
+
