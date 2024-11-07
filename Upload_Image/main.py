@@ -5,16 +5,9 @@ from sqlalchemy.orm import relationship, DeclarativeBase, Mapped, mapped_column
 import datetime
 from sqlalchemy import Integer, String
 
-
-
-
-
-
-
-
 app = Flask(__name__)
 app.config["UPLOAD_FOLDER"]= "static/uploads/station_image"
-
+# TODO: THIS APP SHOULD BE LOCKED UNLESS ACCESSED WITH THE VALID AUTH TOKEN
 # create a database
 class Base(DeclarativeBase):
     pass
@@ -34,10 +27,6 @@ class Station(db.Model):
 
 with app.app_context():
     db.create_all()
-
-
-
-
 
 @app.route("/")
 def home():
@@ -73,4 +62,4 @@ def station_1():
 
 
 if __name__ == "__main__":
-    app.run( debug=True)
+    app.run(debug=True, port=5001)

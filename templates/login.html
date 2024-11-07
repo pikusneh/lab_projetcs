@@ -2,6 +2,14 @@
 
 <div class="box">
   <h1>Login</h1>
+  <!-- Display flashed messages -->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
   <!-- TODO: Use Message Flashing to display feedback to the user with a <p> -->
   <form action="{{ url_for('login') }}" method="post">
     <input type="text" name="email" placeholder="Email" required="required" />

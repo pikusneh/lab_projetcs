@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Login app",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/app.py",
+      "args": [
+        "run",
+      ],
+      "jinja": true,
+      "env": {
+        "FLASK_APP": "app.py",
+        "FLASK_ENV": "development"
+      },
+      "console": "integratedTerminal"
+    },
+    {
+        "name": "Stations app",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${workspaceFolder}/Upload_Image/main.py",
+        "args": [
+          "run",
+        ],
+        "jinja": true,
+        "env": {
+          "FLASK_APP": "app.py",
+          "FLASK_ENV": "development"
+        },
+        "console": "integratedTerminal"
+      }
+  ]
+}
