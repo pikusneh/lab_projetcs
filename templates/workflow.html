@@ -1,0 +1,67 @@
+{% extends "base.html" %} {% block content %}
+
+<h2>
+    Work Flow
+</h2>
+<ol>
+ <li>
+    <a href="{{url_for('add_data' , num=1)}}">Visual Inspection</a>
+ </li>
+ <li>
+   <a href="{{url_for('add_data' , num=2)}}">Kapton Gluing</a>
+ </li>
+ <li>
+    <a href="{{url_for('add_data' , num=3)}}">HV & IV Test</a>
+ </li>
+ <li>
+   <a href="{{url_for('add_data' , num=4)}}">Sensor Gluing</a>
+ </li>
+ <li>
+    <a href="{{url_for('add_data' , num=5)}}">Needle Metrology</a>
+ </li>
+ <li>
+   <a href="{{url_for('add_data' , num=6)}}">Skeleton Test</a>
+ </li>
+ <li>
+    <a href="{{url_for('add_data' , num=7)}}">Hybrid Gluing</a>
+ </li>
+ <li>
+    <a href="{{url_for('add_data' , num=8)}}">Wire Bonding</a>
+ </li>
+ <li>
+    <a href="{{url_for('add_data' , num=9)}}">Noise Test</a>
+ </li>
+ <li>
+    <a href="{{url_for('add_data' , num=10)}}">Burnim Test</a>
+ </li>
+
+
+
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
